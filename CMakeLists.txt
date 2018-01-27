@@ -18,6 +18,7 @@ set(LIBRARY_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/lib)
 
 find_package(OROCOS-RTT REQUIRED ${RTT_HINTS})
 include(${OROCOS-RTT_USE_FILE_PATH}/UseOROCOS-RTT.cmake)
+include_directories(${OROCOS-RTT_INCLUDE_DIRS})
 
 orocos_service(rtt_dot_service src/rtt_dot_service.cpp)
 orocos_generate_package(
